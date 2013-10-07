@@ -77,7 +77,7 @@ class Downloads_FileTest extends PHPUnit_Framework_TestCase
             }
         ));
         /** @var Downloads_File $file */
-        $file->setContents('foo');
+        $file->setContents("foo\nbar");
         $file->setContentType('text/plain');
         $file->setCharset('utf-8');
         $this->expectOutputString(
@@ -88,8 +88,9 @@ class Downloads_FileTest extends PHPUnit_Framework_TestCase
             "Expires: 0\n" .
             "Cache-Control: must-revalidate, post-check=0, pre-check=0\n" .
             "Pragma: public\n" .
-            "Content-Length: 3\n" .
-            "foo");
+            "Content-Length: 7\n" .
+            "foo\n" .
+            "bar");
         $file->send();
     }
 

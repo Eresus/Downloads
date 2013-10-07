@@ -132,7 +132,10 @@ class Downloads_File extends SplFileObject
         $this->sendHeader('Pragma', 'public');
         $this->sendHeader('Content-Length', $this->getSize());
         $this->rewind();
-        echo $this->fgets();
+        while (!$this->eof())
+        {
+            echo $this->fgets();
+        }
     }
 
     /**
