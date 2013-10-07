@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="downloads" default="build" basedir="./">
+<project name="downloads" default="build" basedir="src/">
 
     <property file="build.properties" />
 
@@ -11,12 +11,12 @@
     -->
 
     <!-- Все исходные файлы -->
-    <fileset dir="src" id="files.sources">
+    <fileset dir="src/src" id="files.sources">
         <include name="**" />
     </fileset>
 
     <!-- Исходные файлы PHP -->
-    <fileset dir="src" id="files.sources.php">
+    <fileset dir="src/src" id="files.sources.php">
         <include name="**/*.php" />
     </fileset>
 
