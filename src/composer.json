@@ -1,0 +1,14 @@
+{
+    "name": "eresus/downloads",
+    "authors":
+    [
+        {
+            "name": "Михаил Красильников",
+            "email": "m.krasilnikov@yandex.ru"
+        }
+    ],
+    "require":
+    {
+        "mekras/test-doubles": "dev-master"
+    }
+}
